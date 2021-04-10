@@ -4,8 +4,8 @@
 ---
 ### Links
 
-[GithubPages Link]()
+[GithubPages Link](https://fytrw.github.io/Interactive-pricing-component/)
 
-[Vercel Link]()
+[Vercel Link](https://interactive-pricing-component-silk.vercel.app/)
 
 
