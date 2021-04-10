@@ -412,7 +412,8 @@ button.start:hover {
         display: none;
     }
 
-    .wrapper header h2.mobile p {
+    .wrapper header h2.mobile span {
+        display: block;
         margin-top: 5px;
     }
 
