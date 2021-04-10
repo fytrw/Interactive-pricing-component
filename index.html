@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <h2 class="desktop">Sign-up for our 30-day trial. No credit card required.</h2>
+      <h2 class="mobile">Sign-up for our 30-day trial. <p>No credit card required.</p></h2>
+    </header>
+    <div class="card-wrap">
+      <div class="main">
+          <p class="pageviews"><span>100k</span> Pageviews</p>
+          <p class="amount"><span class="money">$<span>16.00</span></span> <span class="month">/ month</span></p>
+        <input type="range" id="slider" 
+        min="0" max="4">
+        <div class="billing">
+          <p>Monthly Billing</p>
+          <label class="switch">
+            <input type="checkbox" onchange="changeInfo()">
+            <span class="slider round"></span>
+          </label>
+          <p>Yearly Billing <button class="desktop">25% discount</button><button class="mobile">-25%</button></p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="benefits">
+          <div><img src="images/icon-check.svg" alt="check">Unlimited websites</div>
+          <div><img src="images/icon-check.svg" alt="check">100% data ownership</div>
+          <div><img src="images/icon-check.svg" alt="check">Email reports</div>
+        </div>
+        <button class="start">Start my trial</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

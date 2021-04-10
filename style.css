@@ -1,0 +1,474 @@
+:root {
+    --softcyan: hsl(174, 77%, 80%);
+    --strongcyan: hsl(174, 86%, 45%);
+    --lightgrayingred: hsl(14, 92%, 95%);
+    --lightred: hsl(15, 100%, 70%);
+    --paleblue: hsl(226, 100%, 87%);
+    --verypaleblue: hsl(230, 100%, 99%);
+    --lightgrayishblue: hsl(224, 65%, 95%);
+    --secondlightgrayishblue: hsl(223, 50%, 87%);
+    --grayishblue: hsl(225, 20%, 60%);
+    --darkdesaturatedblue: hsl(227, 35%, 25%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/bg-pattern.svg');
+    background-position: 0 0;
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-color: var(--verypaleblue);
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+
+@media (min-width: 1441px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+}
+
+.wrapper header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/pattern-circles.svg');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.wrapper header h1 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: var(--darkdesaturatedblue);
+}
+
+
+.wrapper header h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--grayishblue);
+}
+
+.wrapper header h2.mobile {
+    display: none;
+}
+
+.card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0 40px;
+    background-color: #fff;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        0 100px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 7px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 30px 35px;
+    border-bottom: 1px solid #eee;
+}
+
+.pageviews {
+    flex-basis: 50%;
+    order: 1;
+    margin-bottom: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: var(--grayishblue);
+}
+
+.amount {
+    flex-basis: 50%;
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    line-height: 50px;
+}
+
+.amount span.money {
+    margin-right: 10px;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--darkdesaturatedblue);
+}
+
+.amount span.month {
+    color: var(--grayishblue);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    /* Specific width is required for Firefox. */
+    background: transparent;
+    /* Otherwise white in Chrome */
+    margin-bottom: 65px;
+    order: 3;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 46px;
+    width: 46px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: -18px;
+    box-shadow: 0 10px 15px 3px var(--softcyan);
+    background: var(--strongcyan);
+    background-image: url('images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color .3s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background-color: var(--softcyan);
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    height: 46px;
+    width: 46px;
+    background: var(--strongcyan);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px 3px var(--softcyan);
+    cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    height: 46px;
+    width: 46px;
+    background: var(--strongcyan);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px 3px var(--softcyan);
+    cursor: pointer;
+}
+
+
+/* Styling line */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    background: var(--lightgrayishblue);
+    border-radius: 25px;
+    border: none;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    background: var(--lightgrayishblue);
+    border-radius: 25px;
+    border: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: var(--lightgrayishblue);
+    border: none;
+    border-radius: 25px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: var(--lightgrayishblue);
+    border: none;
+    border-radius: 25px;
+}
+
+.billing {
+    align-self: center;
+    flex-basis: 100%;
+    order: 4;
+    display: flex;
+    justify-content: center;
+}
+
+.billing p {
+    flex-basis: 45%;
+    font-size: 14px;
+    color: var(--grayishblue);
+}
+
+.billing p:first-of-type {
+    text-align: right;
+}
+
+.billing p>button {
+    width: 85px;
+    margin-left: 5px;
+    background-color: var(--lightgrayingred);
+    color: var(--lightred);
+    border: none;
+    border-radius: 25px;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 800;
+    font-family: 'Manrope', sans-serif;
+}
+
+.billing p>button:focus {
+    outline: none;
+}
+
+.billing button.mobile {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondlightgrayishblue);
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: linear .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: ease .3s;
+}
+
+.switch input:checked+.slider {
+    background-color: var(--strongcyan);
+}
+
+.switch input:focus+.slider {
+    box-shadow: 0 0 1px var(--strongcyan);
+}
+
+.switch input:hover+.slider {
+    background-color: var(--softcyan)
+}
+
+.switch input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 35px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 35px;
+    margin-top: 35px;
+}
+
+.bottom .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+    color: var(--grayishblue);
+}
+
+.bottom .benefits div {
+    font-size: 13px;
+}
+
+.bottom .benefits img {
+    margin-right: 12px;
+}
+
+button.start {
+    width: 190px;
+    line-height: 45px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--darkdesaturatedblue);
+    color: var(--paleblue);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+}
+
+button.start:focus {
+    outline: none;
+}
+
+button.start:hover {
+    color: #fff;
+}
+
+@media (orientation: portrait) {
+    body {
+        padding: 0 20px 50px 20px;
+    }
+
+    .wrapper header {
+        height: 225px;
+
+    }
+
+    .wrapper header h1 {
+        font-size: 22px;
+    }
+
+    .wrapper header h2.mobile {
+        display: block;
+        text-align: center;
+    }
+
+    .wrapper header h2.desktop {
+        display: none;
+    }
+
+    .wrapper header h2.mobile p {
+        margin-top: 5px;
+    }
+
+    .card-wrap {
+        padding: 30px 0 30px;
+    }
+
+    .main {
+        padding: 0 0 35px;
+    }
+
+    .pageviews {
+        flex-basis: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .amount {
+        flex-basis: 100%;
+        order: 3;
+        justify-content: center;
+    }
+
+    input#slider {
+        order: 2;
+        margin: 0 30px 65px;
+    }
+
+    .billing p {
+        font-size: 13px;
+    }
+
+    .switch {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .billing button.desktop {
+        display: none;
+    }
+
+    .billing button.mobile {
+        display: inline-block;
+        width: 40px;
+    }
+
+    .bottom {
+        flex-direction: column;
+    }
+
+    .bottom .benefits div {
+        font-size: 14px;
+    }
+
+    button.start {
+        margin-right: 0;
+        margin-top: 30px;
+    }
+}
